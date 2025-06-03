@@ -58,3 +58,7 @@ Ans : Use placeholder provided for useQuery and give value as keepPreviousData t
 
 Q11) How to cancel api call in react using react query?
 Ans : Use singal queryFn gives a parameter signal use that after your api url in axios or in fetch whatever you are using.
+
+Q12) Explain the implementation of crud in brief with react query?
+Ans : useQuery, useQueries : To read data.
+useMutation : To create, update and delete data.
