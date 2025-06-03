@@ -1,2 +1,33 @@
-Q1) What is the default stale time of your React query?
-Ans : Default stale time of react query is 5 mins.
+Q1) What is the default stale time and gcTime of your React query?
+Ans : Default stale time of react query is 0 it becomes stale as soon as the query is hit.
+Deafault gcTime is 5min.
+
+DOUT : gcTime ka usecase kya hai?
+Ans : cache memory me data kabtak zinda rahega.
+agar cache me data hai he nhi tou api se data manga jega.
+
+Understand these extreme level scenarios for best undestanding : 
+1)If the stale time is over and gcTime is still there. What will happen?
+Ans: API will be refetched as the data is stale now, but we will see old cache data in the ui as the gcTime is still there but if the reponse from the api is new
+the cache data is replaced by the new one. benifit : ux optimized and ram optimized.
+2)If the stale time is there but the gcTime is not there the api still be refetched as there is no data to show in the cache.
+
+refetched is triggered if the data is stale or there is no data in the cache.
+
+Q2) Difference between gcTime and stale Time?
+Ans : stale Time : Data kab tak fresh hai agar stale time pura hogaya tou api refetch ho jaegi manually ya automatically.
+gcTime : Data cache me kab tab rahe.
+
+Q3) How react query shows you always the lastest data though taking the data from the cache if the stale time has not ended?
+Ans: Cache in react query is replaced by the lastest data if the response from the api changes, understand it like it an query got hit with the same queryKey with the cache data, so it will show the cached data but if the response from the api
+is diffrent from the previous one the cache data changes to show the latest data, the api gets hit everytime.
+
+
+Q4) What is the diffrence between isPending, isFetching and isLoading in react Query?
+Ans : isPending : It results true when there is cache data in the query and the api is getting hit if the response is diffrent cache data changes.
+isLoading : Hits initially when the api hits for the first time then the cache data is used until its replaced by the new data form the api response.
+isFetching : If any query is getting fetched in the background.
+
+Q5) What are dev tools in reactQuery and how to use them, how to implement in your react+tanstack project?
+
+Q6) Diffrence between stale time and gcTime?
