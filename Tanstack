@@ -1,0 +1,2 @@
+Q1) What is the default stale time of your React query?
+Ans : Default stale time of react query is 5 mins.
