@@ -49,3 +49,12 @@ Ans: It is use for asynchronus Server-side state management.
 Q8)How to use react query for getting individual data based on id?
 Ans : By using react query when you give queryKey use key as ['name',id]
 in this way for every new id the query will hit to get a new data.
+
+Q9) How to implement pagination using react query?
+Ans : 
+
+Q10) If you dont want to use loading text and insted show the prev's data as it is not a good ui experience how can you do that?
+Ans : Use placeholder provided for useQuery and give value as keepPreviousData then it will show the prev data unitl the new data has come.
+
+Q11) How to cancel api call in react using react query?
+Ans : Use singal queryFn gives a parameter signal use that after your api url in axios or in fetch whatever you are using.
