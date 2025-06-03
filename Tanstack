@@ -29,5 +29,3 @@ isLoading : Hits initially when the api hits for the first time then the cache d
 isFetching : If any query is getting fetched in the background.
 
 Q5) What are dev tools in reactQuery and how to use them, how to implement in your react+tanstack project?
-
-Q6) Diffrence between stale time and gcTime?
