@@ -2,7 +2,7 @@ Q1) What is the default stale time and gcTime of your React query?
 Ans : Default stale time of react query is 0 it becomes stale as soon as the query is hit.
 Deafault gcTime is 5min.
 
-DOUT : gcTime ka usecase kya hai?
+DOUT (cleared): gcTime ka usecase kya hai?
 Ans : cache memory me data kabtak zinda rahega.
 agar cache me data hai he nhi tou api se data manga jega.
 
@@ -29,3 +29,19 @@ isLoading : Hits initially when the api hits for the first time then the cache d
 isFetching : If any query is getting fetched in the background.
 
 Q5) What are dev tools in reactQuery and how to use them, how to implement in your react+tanstack project?
+
+Q6) Whats is Polling? If you want to implement it how will you?
+Ans : Data fetching at a regular interval of time for the data to be upto date.
+using reftchInterval : It refetched data after every interval the time is specified.
+using refetchIntervalBackground : It refetched data after every interval the time is specified but in background too, even if the component is unmounted or the window is changed.
+
+DOUT CLEARED : If i use a refetchIntervalBackground time specified 1min and go off from the site for one hour would the api be hit 60 times though i left the site closed the tab closed my system?
+
+Jab hum tab close kar dete ho, ya system shutdown/sleep me chala jaata hai:
+React Query ka JS code hi run nahi ho raha hota.
+Tab browser ke event loop aur timers bhi pause ho jaate hain.
+React Query ki refetching ruk jaati hai.
+To API hit nahi hoti, chahe refetchInterval laga ho.
+
+Q7)What is react query ?
+Ans: It is use for asynchronus Server-side state management.
