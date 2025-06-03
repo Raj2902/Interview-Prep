@@ -45,3 +45,7 @@ To API hit nahi hoti, chahe refetchInterval laga ho.
 
 Q7)What is react query ?
 Ans: It is use for asynchronus Server-side state management.
+
+Q8)How to use react query for getting individual data based on id?
+Ans : By using react query when you give queryKey use key as ['name',id]
+in this way for every new id the query will hit to get a new data.
